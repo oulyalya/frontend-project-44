@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/oulyalya/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/oulyalya/frontend-project-44/actions)",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "make": "node Makefile"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/oulyalya/frontend-project-44/issues"
   },
-  "homepage": "https://github.com/oulyalya/frontend-project-44#readme"
+  "homepage": "https://github.com/oulyalya/frontend-project-44#readme",
+  "bin": {
+    "code": "bin/brain-games.js"
+  }
 }
