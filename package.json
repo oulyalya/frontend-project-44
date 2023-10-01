@@ -20,5 +20,8 @@
   "homepage": "https://github.com/oulyalya/frontend-project-44#readme",
   "bin": {
     "code": "bin/brain-games.js"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
   }
 }
