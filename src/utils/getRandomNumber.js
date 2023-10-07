@@ -1,4 +1,6 @@
-const getRandomNumber = (min = 0, max = 100) => {
+import { MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER } from '../consts.js';
+
+const getRandomNumber = (min = MIN_RANDOM_NUMBER, max = MAX_RANDOM_NUMBER) => {
     return Math.floor(Math.random() * (max - min) + min);
 };
 

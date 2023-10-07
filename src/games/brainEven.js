@@ -2,8 +2,9 @@ import readlineSync from 'readline-sync';
 import name from '../cli.js';
 import getRandomNumber from '../utils/getRandomNumber.js';
 
+import { MAX_GAME_ROUNDS } from '../consts.js';
+
 function brainEven() {
-    const MAX_GAME_ROUNDS = 3;
     let correctAnswers = 0;
 
     const isEven = (num) => num % 2 === 0;
