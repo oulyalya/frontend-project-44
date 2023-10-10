@@ -26,7 +26,7 @@ function brainProgression() {
         const expectedAnswer = String(progression[hiddenIndex]);
         progression[hiddenIndex] = '..';
 
-        const question = progression.join(' ');
+        const question = `Question: ${progression.join(' ')}`;
 
         correctAnswers = playGameRound(question, expectedAnswer, correctAnswers);
     }
