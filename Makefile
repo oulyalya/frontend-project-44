@@ -8,19 +8,19 @@ lint:
 	npx eslint .
 
 brain-games:
-	node bin/brain-games.js
+	bin/brain-games.js
 
 brain-even:
-	bin/brain-even.js
+	node bin/brain-even.js
 
 brain-calc:
-	bin/brain-calc.js
+	node bin/brain-calc.js
 
 brain-gcd:
-	bin/brain-gcd.js
+	node bin/brain-gcd.js
 
 brain-progression:
-	bin/brain-progression.js
+	node bin/brain-progression.js
 
 brain-prime:
-	bin/brain-prime.js
+	node bin/brain-prime.js
