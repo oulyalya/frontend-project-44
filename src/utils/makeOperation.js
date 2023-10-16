@@ -1,10 +1,10 @@
 const makeOperation = (number1, number2, operator) => {
   switch (operator) {
-    case "+":
+    case '+':
       return number1 + number2;
-    case "-":
+    case '-':
       return number1 - number2;
-    case "*":
+    case '*':
       return number1 * number2;
     default:
       return false;

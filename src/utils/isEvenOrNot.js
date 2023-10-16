@@ -1,5 +1,3 @@
-const isEvenOrNot = (number) => {
-    return number % 2 === 0;
-};
+const isEvenOrNot = (number) => number % 2 === 0;
 
 export default isEvenOrNot;

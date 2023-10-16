@@ -18,4 +18,3 @@ const playGameRound = (question, expectedAnswer, correctAnswers) => {
 };
 
 export default playGameRound;
-
