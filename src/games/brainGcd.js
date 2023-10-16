@@ -6,7 +6,7 @@ import getGreatestCommonDivisor from '../utils/getGreatestCommonDivisor.js';
 
 function brainGcd() {
     let correctAnswers = 0;
-    const intro = 'What is the result of the expression?';
+    const intro = 'Find the greatest common divisor of given numbers.';
 
     console.log(intro);
 
