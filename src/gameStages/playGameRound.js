@@ -4,17 +4,18 @@ import { MAX_GAME_ROUNDS } from '../consts.js';
 import processAnswer from './processAnswer.js';
 
 const playGameRound = (question, expectedAnswer, correctAnswers) => {
+  let currentScore = correctAnswers;
   console.log(question);
   const answer = readlineSync.question('Your answer: ');
 
   const result = processAnswer(answer, expectedAnswer);
-  correctAnswers += Number(result);
+  currentScore += Number(result);
 
-  if (correctAnswers === MAX_GAME_ROUNDS) {
+  if (currentScore === MAX_GAME_ROUNDS) {
     console.log(`Congratulations, ${name}!`);
   }
 
-  return correctAnswers;
+  return currentScore;
 };
 
 export default playGameRound;
