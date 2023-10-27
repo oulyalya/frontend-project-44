@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import name from '../cli.js';
+import { name } from '../cli.js';
 import { MAX_GAME_ROUNDS } from '../consts.js';
 import processAnswer from './processAnswer.js';
 
