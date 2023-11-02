@@ -4,7 +4,6 @@ import playGameRound from '../gameStages/playGameRound.js';
 import getRandomNumber from '../utils/getRandomNumber.js';
 
 function brainProgression() {
-  let correctAnswers = 0;
   const intro = 'What number is missing in the progression?';
 
   console.log(intro);
@@ -28,11 +27,9 @@ function brainProgression() {
 
     const question = `Question: ${progression.join(' ')}`;
 
-    let roundResult = playGameRound(question, expectedAnswer, i);
+    const roundResult = playGameRound(question, expectedAnswer, i);
 
-    if (roundResult) {
-      correctAnswers += 1;
-    } else {
+    if (!roundResult) {
       break;
     }
   }

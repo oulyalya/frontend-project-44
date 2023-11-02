@@ -5,7 +5,6 @@ import getRandomNumber from '../utils/getRandomNumber.js';
 import getGreatestCommonDivisor from '../utils/getGreatestCommonDivisor.js';
 
 function brainGcd() {
-  let correctAnswers = 0;
   const intro = 'Find the greatest common divisor of given numbers.';
 
   console.log(intro);
@@ -17,11 +16,9 @@ function brainGcd() {
     const question = `Question: ${number1} ${number2}`;
     const expectedAnswer = String(getGreatestCommonDivisor(number1, number2));
 
-    let roundResult = playGameRound(question, expectedAnswer, i);
+    const roundResult = playGameRound(question, expectedAnswer, i);
 
-    if (roundResult) {
-      correctAnswers += 1;
-    } else {
+    if (!roundResult) {
       break;
     }
   }

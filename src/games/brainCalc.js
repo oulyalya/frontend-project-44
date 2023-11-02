@@ -5,7 +5,6 @@ import getRandomNumber from '../utils/getRandomNumber.js';
 import makeOperation from '../utils/makeOperation.js';
 
 function brainEven() {
-  let correctAnswers = 0;
   const operators = ['+', '-', '*'];
   const intro = 'What is the result of the expression?';
 
@@ -19,11 +18,9 @@ function brainEven() {
     const question = `Question: ${number1} ${operator} ${number2}`;
     const expectedAnswer = String(makeOperation(number1, number2, operator));
 
-    let roundResult = playGameRound(question, expectedAnswer, i);
+    const roundResult = playGameRound(question, expectedAnswer, i);
 
-    if (roundResult) {
-      correctAnswers += 1;
-    } else {
+    if (!roundResult) {
       break;
     }
   }

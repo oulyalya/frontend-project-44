@@ -5,7 +5,6 @@ import getRandomNumber from '../utils/getRandomNumber.js';
 import isPrime from '../utils/isPrime.js';
 
 function brainPrime() {
-  let correctAnswers = 0;
   const intro = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
   console.log(intro);
@@ -15,11 +14,9 @@ function brainPrime() {
     const expectedAnswer = isPrime(number) ? 'yes' : 'no';
     const question = `Question: ${number}`;
 
-    let roundResult = playGameRound(question, expectedAnswer, i);
+    const roundResult = playGameRound(question, expectedAnswer, i);
 
-    if (roundResult) {
-      correctAnswers += 1;
-    } else {
+    if (!roundResult) {
       break;
     }
   }

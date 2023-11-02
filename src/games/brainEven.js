@@ -5,7 +5,6 @@ import getRandomNumber from '../utils/getRandomNumber.js';
 import isEvenOrNot from '../utils/isEvenOrNot.js';
 
 function brainEven() {
-  let correctAnswers = 0;
   const intro = 'Answer "yes" if the number is even, otherwise answer "no".';
 
   console.log(intro);
@@ -14,11 +13,9 @@ function brainEven() {
     const number = getRandomNumber();
     const question = `Question: ${number}`;
     const expectedAnswer = isEvenOrNot(number) ? 'yes' : 'no';
-    let roundResult = playGameRound(question, expectedAnswer, i);
+    const roundResult = playGameRound(question, expectedAnswer, i);
 
-    if (roundResult) {
-      correctAnswers += 1;
-    } else {
+    if (!roundResult) {
       break;
     }
   }
