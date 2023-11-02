@@ -28,7 +28,13 @@ function brainProgression() {
 
     const question = `Question: ${progression.join(' ')}`;
 
-    correctAnswers = playGameRound(question, expectedAnswer, correctAnswers);
+    let roundResult = playGameRound(question, expectedAnswer, i);
+
+    if (roundResult) {
+      correctAnswers += 1;
+    } else {
+      break;
+    }
   }
 }
 

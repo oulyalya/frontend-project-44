@@ -19,7 +19,13 @@ function brainEven() {
     const question = `Question: ${number1} ${operator} ${number2}`;
     const expectedAnswer = String(makeOperation(number1, number2, operator));
 
-    correctAnswers = playGameRound(question, expectedAnswer, correctAnswers);
+    let roundResult = playGameRound(question, expectedAnswer, i);
+
+    if (roundResult) {
+      correctAnswers += 1;
+    } else {
+      break;
+    }
   }
 }
 

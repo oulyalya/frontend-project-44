@@ -15,7 +15,13 @@ function brainPrime() {
     const expectedAnswer = isPrime(number) ? 'yes' : 'no';
     const question = `Question: ${number}`;
 
-    correctAnswers = playGameRound(question, expectedAnswer, correctAnswers);
+    let roundResult = playGameRound(question, expectedAnswer, i);
+
+    if (roundResult) {
+      correctAnswers += 1;
+    } else {
+      break;
+    }
   }
 }
 

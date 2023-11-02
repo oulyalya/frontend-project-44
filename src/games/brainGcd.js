@@ -17,7 +17,13 @@ function brainGcd() {
     const question = `Question: ${number1} ${number2}`;
     const expectedAnswer = String(getGreatestCommonDivisor(number1, number2));
 
-    correctAnswers = playGameRound(question, expectedAnswer, correctAnswers);
+    let roundResult = playGameRound(question, expectedAnswer, i);
+
+    if (roundResult) {
+      correctAnswers += 1;
+    } else {
+      break;
+    }
   }
 }
 
