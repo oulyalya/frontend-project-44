@@ -12,7 +12,7 @@ function brainEven() {
 
   for (let i = 0; i < MAX_GAME_ROUNDS; i += 1) {
     const number = getRandomNumber();
-    const question = `${number}`;
+    const question = `Question ${i + 1}: ${number}`;
     const expectedAnswer = isEvenOrNot(number) ? 'yes' : 'no';
     correctAnswers = playGameRound(question, expectedAnswer, correctAnswers);
   }
