@@ -16,7 +16,7 @@ function brainEven() {
     const number2 = getRandomNumber();
     const operator = operators[getRandomNumber(0, operators.length - 1)];
 
-    const question = `${number1} ${operator} ${number2}`;
+    const question = `Question: ${number1} ${operator} ${number2}`;
     const expectedAnswer = String(makeOperation(number1, number2, operator));
 
     correctAnswers = playGameRound(question, expectedAnswer, correctAnswers);

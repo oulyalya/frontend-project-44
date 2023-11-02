@@ -14,7 +14,7 @@ function brainGcd() {
     const number1 = getRandomNumber();
     const number2 = getRandomNumber();
 
-    const question = `${number1} ${number2}`;
+    const question = `Question: ${number1} ${number2}`;
     const expectedAnswer = String(getGreatestCommonDivisor(number1, number2));
 
     correctAnswers = playGameRound(question, expectedAnswer, correctAnswers);
