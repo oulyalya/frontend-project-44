@@ -14,7 +14,12 @@ function brainEven() {
     const number = getRandomNumber();
     const question = `Question: ${number}`;
     const expectedAnswer = isEvenOrNot(number) ? 'yes' : 'no';
-    correctAnswers = playGameRound(question, expectedAnswer, correctAnswers);
+    const roundResult = playGameRound(question, expectedAnswer, correctAnswers);
+    if (roundResult) {
+      correctAnswers += 1;
+    } else {
+      break;
+    }
   }
 }
 

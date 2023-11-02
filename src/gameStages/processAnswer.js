@@ -1,7 +1,7 @@
 import { name } from '../cli.js';
 
 const processAnswer = (answer, expectedAnswer) => {
-  const isCorrect = answer === expectedAnswer;
+  const isCorrect = answer.toLowerCase() === expectedAnswer.toLowerCase();
 
   if (isCorrect) {
     console.log('Correct!');
