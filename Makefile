@@ -7,6 +7,9 @@ publish:
 lint:
 	npx eslint .
 
+game:
+	bin/game.js
+
 brain-games:
 	bin/brain-games.js
 

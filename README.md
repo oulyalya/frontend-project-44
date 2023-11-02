@@ -12,7 +12,7 @@
 - `make brain-progression` - launch brain-progression game
 - `make brain-prime` - launch brain-prime game
 
-#### Asciinema Link [(brain-games game)](https://asciinema.org/a/nsEiPw2f8JMDP58bZmRhtTPuu)
+#### Asciinema Link [(brain-games greeting)](https://asciinema.org/a/hV59gnunBSTdVCdr9JelW1Tkc)
 
 #### Asciinema Link [(brain-even game)](https://asciinema.org/a/RAR0etknFjwhb5QZ7jQI8sa6s)
 
