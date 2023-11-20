@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
-import greeting from '../cli.js';
-import { MAX_GAME_ROUNDS, TEXT_COLOR } from '../consts.js';
-import processAnswer from './processAnswer.js';
+import greeting from './cli.js';
+import { MAX_GAME_ROUNDS, TEXT_COLOR } from './consts.js';
+import processAnswer from './gameStages/processAnswer.js';
 
 const initGame = (intro, gameFn) => {
   const name = greeting();

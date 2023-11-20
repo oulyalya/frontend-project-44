@@ -1,4 +1,4 @@
-import initGame from '../gameStages/initGame.js';
+import initGame from '../index.js';
 import getRandomNumber from '../utils/getRandomNumber.js';
 import isEvenOrNot from '../utils/isEvenOrNot.js';
 
