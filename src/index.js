@@ -1,9 +1,8 @@
 import readlineSync from 'readline-sync';
 import greeting from './cli.js';
 import { MAX_GAME_ROUNDS, TEXT_COLOR } from './consts.js';
-import processAnswer from './gameStages/processAnswer.js';
 
-const initGame = (intro, gameFn) => {
+const startGame = (intro, gameFn) => {
   const name = greeting();
 
   console.log(intro);
@@ -13,20 +12,20 @@ const initGame = (intro, gameFn) => {
 
     console.log(question);
     const answer = readlineSync.question('Your answer: ');
-    const isCorrectResult = processAnswer(answer, expectedAnswer, currentRound);
+    const isCorrectResult = answer.toLowerCase() === expectedAnswer.toLowerCase();
 
     if (isCorrectResult) {
       console.log(TEXT_COLOR.green, 'Correct!');
-
-      if (currentRound + 1 === MAX_GAME_ROUNDS) {
-        console.log(TEXT_COLOR.green, `Congratulations, ${name}!`);
-      }
     } else {
       console.log(TEXT_COLOR.red, `'${answer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.`);
       console.log(TEXT_COLOR.red, `Let's try again, ${name}!`);
       break;
     }
+
+    if (currentRound + 1 === MAX_GAME_ROUNDS) {
+      console.log(TEXT_COLOR.green, `Congratulations, ${name}!`);
+    }
   }
 };
 
-export default initGame;
+export default startGame;

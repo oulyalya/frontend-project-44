@@ -1,4 +1,4 @@
-import initGame from '../index.js';
+import startGame from '../index.js';
 import getRandomNumber from '../utils/getRandomNumber.js';
 import isPrime from '../utils/isPrime.js';
 
@@ -13,7 +13,7 @@ const game = () => {
 };
 
 const brainPrime = () => {
-  initGame(intro, () => game());
+  startGame(intro, game);
 };
 
 export default brainPrime;

@@ -1,4 +1,4 @@
-import initGame from '../index.js';
+import startGame from '../index.js';
 import getRandomNumber from '../utils/getRandomNumber.js';
 import isEvenOrNot from '../utils/isEvenOrNot.js';
 
@@ -13,7 +13,7 @@ const game = () => {
 };
 
 const brainEven = () => {
-  initGame(intro, () => game());
+  startGame(intro, game);
 };
 
 export default brainEven;

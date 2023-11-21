@@ -1,4 +1,4 @@
-import initGame from '../index.js';
+import startGame from '../index.js';
 import getRandomNumber from '../utils/getRandomNumber.js';
 import getGreatestCommonDivisor from '../utils/getGreatestCommonDivisor.js';
 
@@ -15,7 +15,7 @@ const game = () => {
 };
 
 const brainGcd = () => {
-  initGame(intro, () => game());
+  startGame(intro, game);
 };
 
 export default brainGcd;
