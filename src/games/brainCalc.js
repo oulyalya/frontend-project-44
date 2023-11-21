@@ -5,9 +5,7 @@ import makeOperation from '../utils/makeOperation.js';
 const operators = ['+', '-', '*'];
 const intro = 'What is the result of the expression?';
 
-const getRandomOperatorIndex = () => {
-  return getRandomNumber(0, operators.length - 1);
-};
+const getRandomOperatorIndex = () => getRandomNumber(0, operators.length - 1);
 
 const game = () => {
   const number1 = getRandomNumber();
