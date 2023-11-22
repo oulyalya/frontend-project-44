@@ -19,13 +19,11 @@ const startGame = (intro, gameFn) => {
     } else {
       console.log(TEXT_COLOR.red, `'${answer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.`);
       console.log(TEXT_COLOR.red, `Let's try again, ${name}!`);
-      break;
-    }
-
-    if (currentRound + 1 === MAX_GAME_ROUNDS) {
-      console.log(TEXT_COLOR.green, `Congratulations, ${name}!`);
+      return;
     }
   }
+
+  console.log(TEXT_COLOR.green, `Congratulations, ${name}!`);
 };
 
 export default startGame;
