@@ -1,21 +1,16 @@
 import startGame from '../index.js';
 import getRandomNumber from '../utils/getRandomNumber.js';
+import generateProgression from '../utils/generateProgression.js';
 
 const intro = 'What number is missing in the progression?';
 
 const game = () => {
-  const progressionLength = getRandomNumber(5, 10);
-  const progressionStartNumber = getRandomNumber();
-  const progressionStep = getRandomNumber(1, 20);
-  const hiddenIndex = getRandomNumber(0, progressionLength);
+  const length = getRandomNumber(5, 10);
+  const startNumber = getRandomNumber();
+  const step = getRandomNumber(1, 20);
+  const hiddenIndex = getRandomNumber(0, length);
 
-  const progression = [];
-  let currentNumber = progressionStartNumber;
-
-  for (let j = 0; j <= progressionLength; j += 1) {
-    progression[j] = currentNumber;
-    currentNumber += progressionStep;
-  }
+  const progression = generateProgression(length, startNumber, step);
 
   const expectedAnswer = String(progression[hiddenIndex]);
   progression[hiddenIndex] = '..';
